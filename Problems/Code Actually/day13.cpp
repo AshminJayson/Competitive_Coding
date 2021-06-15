@@ -1,3 +1,7 @@
+//This will replace all instances of the change string irrespective of whether it's a part of another word.
+//Also when replacing the change string with a string longer or shorter than the length of the change string it will result in the overwriting of certain characters.
+//So find a better alternative method that takes these factors into consideration.
+
 #include <bits/stdc++.h>
  
 using namespace std;

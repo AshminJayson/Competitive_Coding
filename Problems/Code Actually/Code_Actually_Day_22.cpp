@@ -32,6 +32,7 @@ start()
         }
     }
 
+    // Can also be done with a change in approach listed below the main()
     for(int i = 0; i < spos - 1; i++)
     {
         if(nums[i] > nums[i + 1])
@@ -55,7 +56,7 @@ start()
     
     if(nums[n - 1] > nums[0])
         flag = false;
-
+    // End of changable section
     if(flag)
     cout << "YES\n";
     else
@@ -65,3 +66,19 @@ start()
  
 return 0;
 }
+
+//Alternate sectional approach
+    //rotation of the vector by placing the smallest element at index 0
+    rotate(nums.begin(), nums.begin() + spos, nums.end());
+    for(auto x : nums)
+        cout << x;
+
+    //checking for order of elements
+    for(int i = 0; i < n - 1; i++)
+    {
+        if(nums[i] > nums[i + 1])
+        {
+            flag = false;
+            break;
+        }
+    }

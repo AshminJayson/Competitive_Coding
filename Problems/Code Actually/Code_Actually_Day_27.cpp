@@ -40,9 +40,7 @@ vector <char> a(n);
 for(auto &x : a)
     cin >> x;
 
-int counter = subs(a);
-
-cout << counter  << lb;
+cout << subs(a) << lb;
 }
 return 0;
 }

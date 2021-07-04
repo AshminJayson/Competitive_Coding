@@ -18,18 +18,13 @@ start(){
     string s;
     cin >> s;
     int packets = 0;
-    for(int i = 0; i < s.length(); i++)   
+    for(int i = 0; i < s.length() - 1; i++)   
     {
-        if(s[i] == '1')
-        {
+        if(s[i] == '1' && s[i] != s[i + 1])
             packets++;
-            int j = i + 1;
-            while(s[i] == s[j] && j < s.length())
-                j++;
-            
-            i = --j;
-        }
     }
+    if(s[s.length() - 1] == '1')
+        packets++;
 
     cout << packets << lb;
  

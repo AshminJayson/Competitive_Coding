@@ -20,7 +20,7 @@ cin >> n >> k;
 vector <int> a(n);
 for(auto &x : a)
     cin >> x;
-// ENd of Input
+// End of Input
 
 lli ops = 0;
 for(auto &x : a)

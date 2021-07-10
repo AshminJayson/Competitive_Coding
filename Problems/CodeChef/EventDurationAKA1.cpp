@@ -4,6 +4,7 @@ using namespace std;
  
 int main()
 {
+ 
 int n, k, maxtime = 0;
 cin >> n >> k;
 int time[n];

@@ -15,13 +15,13 @@ sort(time, time + n);
 for(int i = 0; i < n - 1; i++)
 {
     if(k <= time[i + 1] - time[i])
-    maxTime += k;
+    maxtime += k;
     else
-    maxTime += time[i + 1] - time[i];
+    maxtime += time[i + 1] - time[i];
 }
 
-maxTime += k;
-cout << maxTime << "\n";
+maxtime += k;
+cout << maxtime << "\n";
 
 return 0;
 }

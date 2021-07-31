@@ -8,14 +8,14 @@ long maxpossible(long diff[], long i, long n, long k, long x)
     return 0;
 
     long r = 0;
-    if(diff[i] < diff[i-1])
+    if(diff[i] <= diff[i-1])
     r = 1 + maxpossible(diff, i + 1, n, k, x);
     else
     {
         long a,b;
         a = b = -1;
         if(k >= (diff[i] - diff[i-1]))
-        a=1+maxpossible(diff, i + 1, n, k - (diff[i] - diff[i - 1]), x);
+        a = 1 + maxpossible(diff, i + 1, n, k - (diff[i] - diff[i - 1]), x);
         
         if(x != 0)
         b = 1 + maxpossible(diff, i + 1, n, k, x - 1);
@@ -45,3 +45,4 @@ cout<<maxpossible(diff, 1, n, k, x);
 
 return 0;
 }
+

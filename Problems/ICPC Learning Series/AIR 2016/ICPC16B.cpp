@@ -13,37 +13,34 @@ cin.tie(NULL);
 start(t)
 {
     int n;
-    cin>>n;
+    cin >> n;
 
     //End of input
 
-    int negones=0;
-    int ones=0;
-    int others=0;
-    int zeroes=0;
-
+    int negones = 0, ones = 0, others = 0, zeroes = 0;
 
     while(n--)
     {
-        int x;cin>>x;
-        if(x==1)
+        int x;
+        cin >> x;
+        if(x == 1)
         ones++;
-        else if(x==-1)
+        else if(x == -1)
         negones++;
-        else if(x==0)
+        else if(x == 0)
         zeroes++;
         else
         others++;
     }
-    bool is_beautiful = true;
+    bool is_flawless = true;
 
-    if( others>1 || (negones>1 && ones==0) || (others > 0 && negones>0 ))
-    is_beautiful=false;
+    if( others > 1 || (negones > 1 && ones == 0) || (others > 0 && negones > 0))
+    is_flawless = false;
 
-    if(is_beautiful)
-    cout<<"yes\n";
+    if(is_flawless)
+    cout << "yes\n";
     else
-    cout<<"no\n";
+    cout << "no\n";
 
 }
  

@@ -35,7 +35,7 @@ start(){
                 counter++;
         }
     }
-
+    
     cout << counter << lb;
 }
 return 0;

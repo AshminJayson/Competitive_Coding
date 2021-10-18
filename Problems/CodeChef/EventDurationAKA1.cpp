@@ -4,24 +4,27 @@ using namespace std;
  
 int main()
 {
- 
-int n, k, maxtime = 0;
-cin >> n >> k;
-int time[n];
-for(int i = 0; i < n; i++)
-    cin >> time[i];
+int n,k;
+cin>>n>>k;
+vector <int> time(n);
+int i=0;
+for(auto &x : time)
+    cin >> x;
 
-sort(time, time + n);
-for(int i = 0; i < n - 1; i++)
+int maxTime=0;
+
+sort(time.begin(), time.end());
+
+for(i=0;i<n-1;i++)
 {
-    if(k <= time[i + 1] - time[i])
-    maxtime += k;
-    else
-    maxtime += time[i + 1] - time[i];
+        if(k <=time[i+1]-time[i])
+        maxTime+=k;
+        else
+        maxTime+=time[i+1]-time[i];
 }
 
-maxtime += k;
-cout << maxtime << "\n";
+maxTime+=k;
+cout<<maxTime<<"\n";
 
 return 0;
 }

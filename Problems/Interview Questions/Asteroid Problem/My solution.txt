@@ -1,0 +1,34 @@
+//Solution Function
+void collision(int Asteroid[],int T)
+{
+  int sum;
+for(int i=0;i<T;i++)
+{sum=Asteroid[i];
+  for(int j=0;j<T;j++)
+  {if(Asteroid[i]==0)break;
+    if(Asteroid[i]*Asteroid[j]<0 && Asteroid[i]!<0)
+    {
+      if(abs(Asteroid[i])>abs(Asteroid[j]))
+        Asteroid[j]=0;
+      else if(abs(Asteroid[i])==abs(Asteroid[j]))
+      {
+      Asteroid[i]=0;
+      Asteroid[j]=0;
+    }
+      else
+      Asteroid[i]=0;
+
+    }
+  }
+  cout<<"\nAsteroid "<<i<<"is";
+
+  if(Asteroid[i]==0)
+  cout<<"Destroyed";
+  else
+  cout<<"Not Destroyed";
+
+
+}
+if(sum==0)
+cout<<"NOTHING";
+}

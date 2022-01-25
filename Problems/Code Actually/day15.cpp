@@ -62,8 +62,8 @@ while(elements < n * m)
     j = tj;
     i++;
 }
-    for(int i = 0; i < elements; i++)
-    cout << print[i] << " ";
+    for(auto &x : print)
+    cout << x << " ";
     
 return 0;
 }

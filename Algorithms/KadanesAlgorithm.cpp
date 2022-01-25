@@ -30,15 +30,6 @@ for(auto x : a)
     max_sum = max(curr_sum, max_sum);
 }
  
-/* Alternate Method
-int max_sum = INT_MIN, m = 0;
-for(x : a)
-{
-  m += x;
-  max_sum = max(m, max_sum);
-  m = max(m, 0);
-}*/
- 
 cout << max_sum;
 
 }

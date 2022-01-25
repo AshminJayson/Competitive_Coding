@@ -17,13 +17,13 @@ start(){
 
 int n, k, odds = 0;
 cin >> n >> k;
-vector <int> a(n);
-for(auto &x : a)
+vector <int> nums(n);
+for(auto &x : nums)
     cin >> x;
-// End of Input
+// ENd of Input
 
-lli ops = 0;
-for(auto &x : a)
+lli totaloperations = 0;
+for(auto &x : nums)
 {
     if(x & 1)
     {
@@ -32,43 +32,44 @@ for(auto &x : a)
     }
 }
 
-ops += ceil((float)odds / k);
+totaloperations += ceil((float)odds / k); // Ciel function return the smallest integer value less than or equal to
+//the quotient
 
-sort(a.begin(), a.end());
+sort(nums.begin(), nums.end());
 
 int i = 1;
 
 bool flag = true;
 while(flag)
 {
-    int t = pow(2, i++);
-    int temp = 0;
-    int c1 = t & -t;
+    int p = pow(2, i++);
+    int curroperations = 0;
+    int setbitofp = p & -p;
 
-    for(int j = 0; j < a.size(); j++)
+    for(int j = 0; j < nums.size(); j++)
     {
 
-        int c2 = a[j] & -a[j];
-        if(c1 == c2)
+        int setbitofarrayelement = nums[j] & -nums[j];
+        if(setbitofp == setbitofarrayelement)
         {
-            temp++;
-            a[j] = a[j] - t;
+            curroperations++;
+            nums[j] = nums[j] - p;
         }
 
-        if(a[j] == 0)
+        if(nums[j] == 0)
         {
-            a.erase(a.begin() + j);
+            nums.erase(nums.begin() + j);
             j--;
         }
     }
 
-    if(a.size() == 0)
+    if(nums.size() == 0)
         flag = false;
 
-    ops += ceil((float)temp / k);
+    totaloperations += ceil((float)curroperations / k);
 }
 
-    cout << ops << lb;
+    cout << totaloperations << lb;
 }
 return 0;
 }

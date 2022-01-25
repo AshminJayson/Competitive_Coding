@@ -1,0 +1,27 @@
+//Function to calculate the Hour Glass sum of a 2D array
+
+void hourGlassSum(vector <vector<int>> darr){
+    int sum=0;
+//INT_MIN  condition is given considering an array that contains
+// only negative elements.
+    int temp=INT_MIN;
+    
+    for(int i=0;i<darr.size()-2;i++)
+    {
+        for(int j=0;j<darr[0].size()-2;j++)
+        {
+            sum=darr[i][j]+darr[i][j+1]+darr[i][j+2]+darr[i+1][j+1];
+            sum=sum+darr[i+2][j]+darr[i+2][j+1]+darr[i+2][j+2];
+            
+            if(sum>temp)
+            {
+                temp=sum;
+                sum=0;
+            }
+            else
+            sum=0;
+        }
+    }
+    
+    cout<<temp;
+}

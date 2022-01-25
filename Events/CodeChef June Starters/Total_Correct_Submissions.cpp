@@ -21,8 +21,10 @@ map <string,int> val;
 n = 3 * n;
 while(n--)
 {
-    string s; int x;
-    cin >> s >> x;
+    string s;
+    int x;
+    cin >> s;
+    cin >> x;
 
     val[s] += x;
 }
@@ -30,12 +32,14 @@ while(n--)
 vector <int> sols;
 
 for(auto x : val)
+{
     sols.push_back(x.second);
+}
 
 sort(sols.begin(), sols.end());
 
 for(auto x : sols)
-   cout << x << " ";
+cout << x << " ";
  
 cout << "\n";
 

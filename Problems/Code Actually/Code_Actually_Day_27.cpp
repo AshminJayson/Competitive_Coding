@@ -9,7 +9,7 @@ typedef long long int ll;
 #define lb "\n" 
 
 
-//Finding the subarrays that result in an even number 
+//Finding the count of subarrays that result in an even number 
 int subs(vector <char> a)
 {
     int counter = 0;
@@ -24,9 +24,9 @@ int subs(vector <char> a)
                 counter++;      
         }
     }
-
     return counter;
 }
+
 
 //Driver Program
 int main()

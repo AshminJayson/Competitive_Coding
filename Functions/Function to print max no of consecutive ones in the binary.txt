@@ -1,0 +1,43 @@
+//Function to print max no of consecutive ones in the binary
+ equivalent of  a decimal number by converting it into its 
+binary equivalent.
+void ones(int n)
+{  
+    vector <int> binary;
+    int count=0;
+    int temp=0;
+
+//calculation of binary equivalent
+    while(n!=1){
+        binary.push_back(n%2);
+        n=n/2;
+    }
+    binary.push_back(n);
+    //reversal function predefined for vector 
+    reverse(binary.begin(),binary.end());
+   
+
+int i=0;
+
+//Calculation of max no of consecutive ones
+    while(i!=binary.size())
+    {  
+        if(binary[i]==1)
+        count++;
+        else
+        {
+            if(count>temp){
+            temp=count;
+            count=0;
+            }
+            else 
+            count=0;
+        }
+        
+        i++;
+    }
+    if(temp<count)
+    temp=count;
+    
+    cout<<temp;
+}

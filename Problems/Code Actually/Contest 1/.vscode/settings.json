@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "fstream": "cpp",
+        "functional": "cpp",
+        "future": "cpp",
+        "mutex": "cpp",
+        "sstream": "cpp",
+        "thread": "cpp",
+        "tuple": "cpp",
+        "iostream": "cpp"
+    }
+}

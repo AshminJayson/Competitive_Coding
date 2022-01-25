@@ -27,7 +27,7 @@ start(t){
 
     for(int i=0;i<n;i++)
     {
-        if(timings[i].first>maxtime)
+        if(timings[i].first > maxtime)
         freetime+=timings[i].first-maxtime;
         maxtime=max(timings[i].second,maxtime);
     }

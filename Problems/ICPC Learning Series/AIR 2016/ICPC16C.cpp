@@ -12,8 +12,8 @@ cin.tie(NULL);
 start(t)
 {
     int d;
-    cin>>d;
-    cout<<d%9+1<<"\n";
+    cin >> d;
+    cout << d % 9 + 1 << "\n";
                
 }
  

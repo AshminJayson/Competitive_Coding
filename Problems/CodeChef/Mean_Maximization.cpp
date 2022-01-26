@@ -47,41 +47,22 @@ void solution()
     double n; cin >> n;
     vector <double> a(n); for(auto &x : a) cin >> x;
 
-    vector <double> l(n), r(n);
+    sort(a.begin(), a.end());
+    double maxm = a[n - 1];
+    a.pop_back();
 
-    l[0] = a[0];
-    for(double i = 1; i < n; i++)
-    {
-        double sum = l[i - 1] * i;
-        sum = sum + a[i];
-        l[i] = (double)sum / (i + 1);
+    double mean = 0;
+    for(double i = 0; i < n - 1; i++)
+        mean += a[i];
 
-    }
-    
+    mean /= (n - 1);
+    cout << mean + maxm << lb;
 
-    r[n - 1] = a[n - 1];
-    for(double i = n - 1; i >= 0; i--)
-    {
-        double sum = r[i + 1] * (double)(n - i - 1);
-        sum = sum + a[i];
-        r[i] = (double)sum / (n - i);
-    }
-    
-    debug(l);
-    debug(r);
-
-
-    double max_val = INT_MIN;
-    for(int i = 0; i < n - 1; i++)
-    {
-        max_val = max(max_val, l[i] + r[i + 1]);
-    }
-
-    cout << max_val << lb;
 }
 int main()
 {
 
+cout << fixed << setprecision(9);
  #ifndef ONLINE_JUDGE
    freopen("error.txt", "w", stderr);
  #endif

@@ -84,9 +84,6 @@ class Solution:
                     right -= 1
 
             i += 1
-
-
-
             
 
         return rt

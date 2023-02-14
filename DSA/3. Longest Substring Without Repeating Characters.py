@@ -31,7 +31,7 @@ class Solution:
 
         for r in range(len(s)):
             if s[r] in hashdict:
-                l = hashdict[s[r]]
+                l = max(hashdict[s[r]], l)
 
             max_l = max(max_l, r - l + 1)
             hashdict[s[r]] = r + 1

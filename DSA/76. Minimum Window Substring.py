@@ -21,6 +21,8 @@ class Solution:
 
             # print(l, r, hashDict)
 
+        # To optimize the solution consider string filter as only the contents of s in t and save it onto a list arr as (s[i], i), iterate upon this list
+        # in the same method as before and find the minimum window as r ~ s[r] - l ~ s[l] 
         return minWindowStr
 
         

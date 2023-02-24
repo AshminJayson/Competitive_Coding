@@ -1,7 +1,6 @@
 class Solution:
 
          
-
     def carFleet(self, target: int, position: list[int], speed: list[int]) -> int:
         poSpeed = []
         # for ind in range(len(position)):

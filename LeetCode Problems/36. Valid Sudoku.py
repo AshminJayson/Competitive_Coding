@@ -11,7 +11,6 @@ class Solution:
 
         #Let's try the naive O(n^2) approach
         for i in range(9):
-            longar.extend(board[i])
             tcr = Counter(board[i])
             if check(tcr) == 1:
                 return False

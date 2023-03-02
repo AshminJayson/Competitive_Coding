@@ -1,2 +1,4 @@
 # Competitve_Coding
-Code storage of various competitive coding endeavors.
+Blood, sweat and grime of coding.
+
+(Drama is one of my forte)

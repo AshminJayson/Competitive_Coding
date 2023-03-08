@@ -8,6 +8,7 @@ class WordDictionary:
     def __init__(self):
         self.root = node()
         
+            
 
     def addWord(self, word: str) -> None:
         

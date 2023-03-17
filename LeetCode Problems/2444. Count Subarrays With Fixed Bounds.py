@@ -1,5 +1,5 @@
 class Solution:
-    def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
+    def countSubarrays(self, nums: list[int], minK: int, maxK: int) -> int:
 
         mini, maxi = -1, -1
         l = 0

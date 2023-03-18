@@ -14,7 +14,7 @@ class Twitter:
         heappush(self.tweets, [-self.twc, userId, tweetId])
         print(self.tweets)
 
-    def getNewsFeed(self, userId: int) -> List[int]:
+    def getNewsFeed(self, userId: int) -> list[int]:
         st = []
         kt = []
 

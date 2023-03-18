@@ -2,7 +2,7 @@ from collections import Counter
 from heapq import heapify, heappush, heappop
 
 class Solution:
-    def leastInterval(self, tasks: List[str], n: int) -> int:
+    def leastInterval(self, tasks: list[str], n: int) -> int:
 
         time = 0
         d = Counter(tasks)

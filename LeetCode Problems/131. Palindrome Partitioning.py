@@ -32,6 +32,41 @@ class Solution:
         
         bt(cs, 0)
 
+
+
+        # ALT
+        
+        # rs = []
+        # cs = []
+
+        # def bt(i):
+
+        #     if i >= len(s):
+        #         rs.append(cs.copy())
+        #         return
+
+        #     for j in range(i, len(s)):
+        #         if isPalindrome(s, i, j):
+        #             cs.append(s[i: j + 1])
+        #             bt(j + 1)
+        #             cs.pop()
+
+
+
+        # def isPalindrome(s, i , j):
+
+        #     while i < j:
+        #         if s[i] != s[j]:
+        #             return False
+
+        #         i, j = i + 1, j - 1
+
+
+        #     return True
+        
+        # bt(0)
+        # return rs
+
         return rs
 
         

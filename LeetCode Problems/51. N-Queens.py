@@ -1,5 +1,5 @@
 class Solution:
-    def solveNQueens(self, n: int) -> list[list[str]]:
+    def solveNQueens(self, n: int) -> List[List[str]]:
 
         # For two elements (x, y) and (p, q) they are on the same diagonal iff (p - q) == (x - y) or (p + q) == (x + y)
 
@@ -33,7 +33,7 @@ class Solution:
 
                 if not checkAttack(r, c):
                     cqpos.append([r, c])
-                    bt(i+1)
+                    bt((r+1) * n)
                     cqpos.pop()
                 
 

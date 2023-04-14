@@ -1,5 +1,5 @@
 class Solution:
-    def solveNQueens(self, n: int) -> List[List[str]]:
+    def solveNQueens(self, n: int) -> list[list[str]]:
 
         # For two elements (x, y) and (p, q) they are on the same diagonal iff (p - q) == (x - y) or (p + q) == (x + y)
 

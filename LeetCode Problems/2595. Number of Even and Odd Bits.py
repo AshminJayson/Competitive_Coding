@@ -1,5 +1,5 @@
 class Solution:
-    def evenOddBit(self, n: int) -> List[int]:
+    def evenOddBit(self, n: int) -> list[int]:
 
         val = bin(n)[2:]
         print(val)

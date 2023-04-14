@@ -1,5 +1,5 @@
 class Solution:
-    def checkValidGrid(self, grid: List[List[int]]) -> bool:
+    def checkValidGrid(self, grid: list[list[int]]) -> bool:
 
         def pc(r, c, val):
             if r < 0 or c < 0 or r >= len(grid) or c >= len(grid):

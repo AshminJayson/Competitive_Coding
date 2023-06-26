@@ -9,8 +9,8 @@ class Solution:
             if end <= intervals[i][0]:
                 end = intervals[i][1]
                 continue
-            else:
-                count += 1
-                end = min(end, intervals[i][1])
+            
+            count += 1
+            end = min(end, intervals[i][1])
 
         return count

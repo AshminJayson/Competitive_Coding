@@ -2,14 +2,14 @@
  * @param {string} val
  * @return {Object}
  */
-var expect = function (val) {
+var expect = function (val: string): object {
     return {
-        toBe(ip) {
+        toBe(ip: string) {
             if (ip === val) return true;
             else throw "Not Equal";
         },
 
-        notToBe(ip) {
+        notToBe(ip: string) {
             if (ip !== val) return true;
             else throw "Equal";
         },

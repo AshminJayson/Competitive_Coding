@@ -6,7 +6,7 @@
  */
 
 var reduce = function (nums, fn, init) {
-    res = init;
+    let res = init;
     if (nums.length == 0) return res;
 
     nums.forEach((ele) => {

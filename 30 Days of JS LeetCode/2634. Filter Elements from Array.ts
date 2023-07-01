@@ -4,9 +4,9 @@
  * @return {number[]}
  */
 var filter = function (arr, fn) {
-    res = [];
+    let res: number[] = [];
 
-    arr.forEach((ele, index) => {
+    arr.forEach((ele: number, index: number) => {
         if (fn(ele, index)) res.push(ele);
     });
 
